@@ -1,0 +1,197 @@
+* {
+  all: unset;
+}
+
+// Variable Color's
+$background: #010a15;
+$foreground: #a9b1d6;
+
+$black: #000000;
+$gray: #424d71;
+$red: #dd6777;
+$green: #90ceaa;
+$yellow: #ecd3a0;
+$blue: #1e8b9f;
+$magenta: #c296eb;
+$cyan: #0f94d2;
+$white: $foreground;
+
+// Eww bar
+.eww_bar {
+  background-color: $background;
+  border-radius: 9px;
+}
+
+// Launcher
+.launcher_icon {
+  color: $white;
+  font-family: "Material Design Icons Desktop";
+  font-size: 3.2em;
+  padding: 0;
+}
+
+// Workspaces
+.works {
+  font-family: "Material Design Icons Desktop";
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+  background-color: $background;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.workspace-focused {
+  color: #89422e;
+  margin: 0.55rem 0 0.55rem 0;
+}
+
+.workspace-occupied {
+  color: $blue;
+  margin: 0.55rem 0 0.55rem 0;
+}
+
+.workspace-empty {
+  color: $gray;
+  margin: 0.35rem 0 0.35rem 0;
+}
+
+// icons info
+.control {
+  padding: 0.8rem;
+  font-family: Material Icons;
+  font-size: 1.6em;
+  background-color: $background;
+  border-radius: 5px;
+}
+
+.bat,
+.wifi-icon,
+.brightness-icon,
+.volume-icon {
+  padding: 0.3rem;
+}
+
+.bat {
+  font-family: JetBrainsMono Nerd Font;
+  color: $blue;
+}
+
+.wifi-icon {
+  color: $magenta;
+}
+
+.brightness-icon {
+  color: $yellow;
+}
+.bribar trough highlight {
+  background-color: $yellow;
+  border-radius: 5px;
+}
+
+.volume-icon {
+  color: $green;
+}
+.volbar trough highlight {
+  background: $green;
+  border-radius: 5px;
+}
+
+scale trough {
+  all: unset;
+  background-color: $background;
+  border-radius: 5px;
+  min-height: 80px;
+  min-width: 10px;
+  margin: 0.3rem 0 0.3rem 0.1rem;
+}
+
+// Clock
+.time {
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: $background;
+  color: $gray;
+  border-radius: 5px;
+  padding: 0 0 0.7em 0;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+// Calendar
+.cal-box {
+  background-color: $black;
+  border-radius: 5px;
+  font-family: Comic Mono;
+  font-size: 1em;
+  font-weight: bold;
+
+  .cal-inner-box {
+    padding: 1rem 1rem 0.2rem;
+
+    .cal {
+      &.highlight {
+        padding: 10rem;
+      }
+
+      padding: 0.8rem 0.25rem 0rem;
+      margin-left: 10px;
+    }
+  }
+}
+
+calendar:selected {
+  color: $blue;
+}
+
+calendar.header {
+  color: $blue;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: $magenta;
+}
+
+calendar.highlight {
+  color: $magenta;
+  font-weight: bold;
+}
+
+calendar:indeterminate {
+  color: $gray;
+}
+
+// Powermenu
+.powermenu {
+  font-family: Material Design Icons Desktop;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.button-bspres,
+.button-reb,
+.button-lock,
+.button-quit,
+.button-off {
+  padding: 0;
+}
+
+.button-off {
+  color: $red;
+  padding: 0.2em;
+}
+
+.button-bspres {
+  color: $green;
+}
+
+.button-reb {
+  color: $yellow;
+}
+
+.button-quit {
+  color: $magenta;
+}
+
+.button-lock {
+  color: $blue;
+}
