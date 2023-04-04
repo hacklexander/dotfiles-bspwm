@@ -16,18 +16,22 @@
 | File Manager |                              [Nautilus](https://archlinux.org/packages/extra/x86_64/nautilus/)                              |
 |    Shell     |                                   [Zsh](https://archlinux.org/packages/extra/x86_64/zsh/)                                   |
 
-| <img src="misc/readme/primer-parte.gif" alt="video 1" align="center" width="600px"> | <img src="misc/readme/segunda-parte.gif" alt="video 2" align="center" width="600px"> |
+| <img src="misc/readme/primer-parte.gif" alt="video 1" align="center" width="450px"> | <img src="misc/readme/segunda-parte.gif" alt="video 2" align="center" width="450px"> |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 
 <details>
-<summary><b>Images</b></summary>
+<summary><b>More</b></summary>
 
 | <img src="misc/readme/calendar.png" alt="calendar" align="center" width="150px"> | <img src="misc/readme/rofi.png" alt="Rofi" align="center" width="150px"> | <img src="misc/readme/dashboard.png" alt="Dashboard" align="center" width="150px"> |
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
 
 </details>
 
-# [Instalation]()
+Estas configuraciones estan basadas mayormente en los dotfiles de ***[gh0stzk](https://github.com/gh0stzk/dotfiles)***, dejo los creditos correspondientes, tambien hay configuraciones personales, puede que a todos no les guste, pero no esta de mas que las puedan probar y darme su opinion constructiva.
+
+
+
+<details><summary><b>Instalacion dependencias</b></summary>
 
 Lo primero que debemos hacer es instalar todas las dependencias que necesitaremos para que la configuracion funcione correctamente y sin errores.
 
@@ -39,6 +43,10 @@ sudo pacman -S pacman-contrib polybar brightnessctl dunst rofi   lsd \
 
 yay -S eww --noconfirm
 ```
+</details>
+
+<details><summary><b>Instalacion Dotfiles</b></summary>
+
 Posteriormente a esto lo que tendremos que hacer un git clone para descargar el repositorio y tenerlo localmente, aconsejo clonarlo en la carpeta **`/tmp`**, los comandos son los siguientes:
 
 ```bash
@@ -59,3 +67,4 @@ Ahora haremos lo mismo con el direcorio **`fonts/`**:
 cp -r fonts/* ~/.fonts
 ```
 ----
+</details>
