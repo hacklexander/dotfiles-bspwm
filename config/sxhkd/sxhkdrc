@@ -41,7 +41,7 @@ ctrl + alt + l
 
 # Launch Apps
 super + shift + {t,n,e}
-	{thunar,brave,code}
+	{nautilus,brave,code}
 
 
 
@@ -101,9 +101,9 @@ ctrl + alt + Escape
 ctrl + shift + {q,r}
 	bspc {quit,wm -r}
 	
-# Split horizontal, vertical or cancel
-super + {h,v,q}
-	bspc node -p {east,south,cancel}
+# Split north,south,west,east or cancel
+super + {w,s,a,f,q}
+	bspc node -p {north,south,west,east,cancel}
 
 # Preselect the ratio
 super + ctrl + {1-9}
