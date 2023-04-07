@@ -156,7 +156,6 @@ bindkey "^[[3~" delete-char
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-export JEKYLL_GITHUB_TOKEN=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
 
 
 
