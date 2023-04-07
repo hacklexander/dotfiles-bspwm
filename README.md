@@ -6,7 +6,7 @@
 
 
 
-<img src="https://i.redd.it/f5vu2auetgxz.png" alt="Linux Fetch" align="right" width="400">
+<img src="https://i.redd.it/f5vu2auetgxz.png" alt="Linux Fetch" align="right" width="350">
 
 |    Distro    |                                               [Arch](https://archlinux.org/)                                                |
 | :----------: | :-------------------------------------------------------------------------------------------------------------------------: |
