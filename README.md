@@ -18,14 +18,14 @@
 |   Widgets    |                                  [ElKowars wacky widgets ](https://github.com/elkowar/eww)                                  |
 | Music/Player | [mpd](https://archlinux.org/packages/extra/x86_64/mpd/)-[ncmpcpp](https://archlinux.org/packages/community/x86_64/ncmpcpp/) |
 | File Manager |                              [Nautilus](https://archlinux.org/packages/extra/x86_64/nautilus/)                              |
-|    Shell     |                                   [Zsh](https://archlinux.org/packages/extra/x86_64/zsh/)                                   ||
+|    Shell     |                                   [Zsh](https://archlinux.org/packages/extra/x86_64/zsh/)                                   |  |
 
 
 ---
 ---
 
 
-| <img src="misc/readme/primer-parte.gif" alt="video 1" align="center" width="450px"> | <img src="misc/readme/segunda-parte.gif" alt="video 2" align="center" width="450px"> |
+| <img src="misc/readme/primer-parte.gif" alt="video 1" align="center" width="350px"> | <img src="misc/readme/segunda-parte.gif" alt="video 2" align="center" width="350px"> |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 
 <details>
@@ -40,18 +40,27 @@
 
 <details><summary><b>📦 Instalacion dependencias</b></summary>
 
-Lo primero que debemos hacer es instalar todas las dependencias que necesitaremos para que la configuracion funcione correctamente y sin errores.
+- Lo primero que debemos hacer es instalar todas las dependencias que necesitaremos para que la configuracion funcione correctamente y sin errores.
 
 ```bash
-sudo pacman -S pacman-contrib polybar brightnessctl dunst rofi   lsd \
-			  jq polkit-gnome git playerctl mpd ncmpcpp geany ranger mpc picom \
-			  feh ueberzug maim pamixer libwebp webp-pixbuf-loader xorg-xprop \ xorg-xkill physlock papirus-icon-theme \
-			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels nautilus --noconfirm
+sudo pacman -Syy polybar sxhkd \
+			  kitty brightnessctl dunst rofi lsd \
+			  jq polkit-gnome git playerctl mpd \
+			  ncmpcpp geany ranger mpc picom \
+			  feh ueberzug maim pamixer libwebp \
+			  webp-pixbuf-loader xorg-xprop xorg-xkill \
+			  physlock papirus-icon-theme \
+			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
+			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting 
+```
 
+- Ahora instalamos eww:
+
+```bash
 yay -S eww --noconfirm
 ```
 
-Habilitamos servicios:
+- Habilitamos servicios:
 
 ```bash
 sudo systemctl enable mpd.service
