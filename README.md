@@ -54,7 +54,17 @@ sudo pacman -Syy polybar sxhkd \
 			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting 
 ```
 
-- Ahora instalamos eww:
+- Ahora instalamos AUR:
+```bash
+cd $HOME
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+cd ..
+rm -rf yay
+```
+
+Ahora instalamos eww:
 
 ```bash
 yay -S eww --noconfirm
@@ -89,6 +99,7 @@ cp -r config/* ~/.config
 Ahora haremos lo mismo con el direcorio **`fonts/`**:
 
 ```bash
+mkdir -p ~/.fonts
 cp -r fonts/* ~/.fonts
 ```
 
