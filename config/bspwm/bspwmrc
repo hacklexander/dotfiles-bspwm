@@ -61,9 +61,12 @@ bspfloat &
 # Start X wallpaper.
 feh --no-fehbg --bg-fill $HOME/Pictures/bg.jpg
 
-
 # Fix cursor.
-xsetroot -cursor_name left_ptr 
+xsetroot -cursor_name left_ptr
+
+# set keymap else
+setxkbmap latam
+
 
 ############################## *WINDOWS RULES* #################################
 
