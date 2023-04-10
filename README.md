@@ -29,7 +29,7 @@
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 
 <details>
-<summary><b>More</b></summary>
+<summary><b>Mas fotos</b></summary>
 
 | <img src="misc/readme/calendar.png" alt="calendar" align="center" width="200px"> | <img src="misc/readme/rofi.png" alt="Rofi" align="center" width="200px"> | <img src="misc/readme/dashboard.png" alt="Dashboard" align="center" width="200px"> |
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
@@ -38,23 +38,14 @@
 
 ---
 
-<details><summary><b>📦 Instalacion dependencias</b></summary>
+# 📦 Instalacion dependencias
 
-- Lo primero que debemos hacer es instalar todas las dependencias que necesitaremos para que la configuracion funcione correctamente y sin errores.
+Lo primero que debemos hacer es instalar todas las dependencias que necesitaremos para que la configuracion funcione correctamente y sin errores. 
 
-```bash
-sudo pacman -Syy polybar sxhkd \
-			  kitty brightnessctl dunst rofi lsd \
-			  jq polkit-gnome git playerctl mpd \
-			  ncmpcpp geany ranger mpc picom \
-			  feh ueberzug maim pamixer libwebp \
-			  webp-pixbuf-loader xorg-xprop xorg-xkill \
-			  physlock papirus-icon-theme \
-			  ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-terminus-nerd ttf-inconsolata ttf-joypixels \
-			  zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting 
-```
+>Tenga en cuenta que debemos tener instalado git antes que todo, si no lo tiene instalado solo escriba este comando en consola: **`sudo pacman -S git`**
 
-- Ahora instalamos AUR:
+Instalacion de AUR Helper  **`yay`**:
+
 ```bash
 cd $HOME
 git clone https://aur.archlinux.org/yay.git
@@ -64,23 +55,30 @@ cd ..
 rm -rf yay
 ```
 
-Ahora instalamos eww:
+Instalamos todos los paquetes necesarios:
 
 ```bash
-yay -S eww --noconfirm
+yay -Syy polybar sxhkd todotxt xclip kitty \
+		brightnessctl dunst rofi lsd bat jq \
+		polkit-gnome playerctl mpd nautilus \
+		ncmpcpp geany ranger mpc picom \
+		feh ueberzug maim pamixer libwebp \
+		webp-pixbuf-loader xorg-xprop xorg-xkill \
+		physlock papirus-icon-theme betterlockscreen zsh \
+		zsh-autosuggestions zsh-history-substring-search \
+		zsh-syntax-highlighting zsh-theme-powerlevel10k
 ```
 
-- Habilitamos servicios:
+Habilitamos servicios:
 
 ```bash
 sudo systemctl enable mpd.service
 sudo systemctl start mpd.service
 ```
-</details>
 
 ---
 
-<details><summary><b>Instalacion Dotfiles</b></summary>
+# 📦 Instalacion Dotfiles
 
 Posteriormente a esto lo que tendremos que hacer un git clone para descargar el repositorio y tenerlo localmente, aconsejo clonarlo en la carpeta **`/tmp`**, los comandos son los siguientes:
 
@@ -103,15 +101,18 @@ mkdir -p ~/.fonts
 cp -r fonts/* ~/.fonts
 ```
 
-Copiamos el **`.zshrc`** y **`launcher`**:
+Copiamos el directorio **`bin/`** en **`$HOME/.local/bin`**:
 
 ```bash
-cp -r home/.zshrc $HOME && cp -r home/launcher ~/.local/bin
+cp -r bin/* ~/.local/bin
 ```
 
-----
-</details>
+Copiamos los archivos de configuracion que esta en **`home/`** 
+
+```bash
+cp -r home/* $HOME
+```
 
 ---
 
-Estas configuraciones estan basadas mayormente en los dotfiles de ***[gh0stzk](https://github.com/gh0stzk/dotfiles)***, dejo los creditos correspondientes, tambien hay configuraciones personales, puede que a todos no les guste, pero no esta de mas que las puedan probar y darme su opinion constructiva.
+Estas configuraciones estan basadas mayormente en los dotfiles de ***[gh0stzk](https://github.com/gh0stzk/dotfiles)*** y de ***[rxyhn](https://github.com/rxyhn/tokyo)***, dejo los creditos correspondientes, tambien hay configuraciones personales, puede que a todos no les guste, pero no esta de mas que las puedan probar y darme su opinion constructiva.

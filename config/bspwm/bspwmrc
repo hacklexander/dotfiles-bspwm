@@ -47,7 +47,7 @@ dunst --config $HOME/.config/dunst/dunstrc &
 picom --config $HOME/.config/picom/picom.conf &
 
 # Run polkit daemon if doesn't started.
-[ -n "$(pidof xfce-polkit)" ] || /usr/lib/xfce-polkit/xfce-polkit &
+pgrep -x polkit-gnome-au > /dev/null || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Run power manager.
 xfce4-power-manager &
