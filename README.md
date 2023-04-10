@@ -60,8 +60,8 @@ Instalamos todos los paquetes necesarios:
 ```bash
 yay -Syy polybar sxhkd todotxt xclip kitty \
 		brightnessctl dunst rofi lsd bat jq \
-		polkit-gnome playerctl mpd nautilus \
-		ncmpcpp geany ranger mpc picom \
+		xfce-polkit playerctl mpd nautilus \
+		ncmpcpp ranger mpc picom xfce4-power-manager-git \
 		feh ueberzug maim pamixer libwebp \
 		webp-pixbuf-loader xorg-xprop xorg-xkill \
 		physlock papirus-icon-theme betterlockscreen zsh \
