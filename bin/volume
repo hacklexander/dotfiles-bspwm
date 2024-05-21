@@ -7,11 +7,11 @@
 DIR="$HOME/.config/dunst"
 
 function get_volume {
-      amixer -D pulse get Master | grep '%' | head -n 1 | awk -F'[' '{print $2}' | awk -F'%' '{print $1}'
+      pamixer --get-volume
 }
 
 function is_mute {
-      amixer -D pulse get Master | grep '%' | grep -oE '[^ ]+$' | grep off
+      pamixer --get-mute
 }
 
 function send_notification {
@@ -44,21 +44,21 @@ function send_notification {
 case $1 in
   up)
     # Unmute
-	  amixer -D pulse set Master on > /dev/null
+	  pamixer --unmute > /dev/null
 	  # +5%
-	  amixer -D pulse set Master 5%+ > /dev/null
+	  pamixer -i 5 > /dev/null
     send_notification
     ;;
   down)
     # Unmute
-	  amixer -D pulse set Master on > /dev/null
+	  pamixer --unmute > /dev/null
     # -5%
-	  amixer -D pulse set Master 5%- > /dev/null
+	  pamixer -d 5 > /dev/null
     send_notification
     ;;
   mute)
     # Toggle mute
-	  amixer -D pulse set Master 1+ toggle > /dev/null
+	  pamixer --mute > /dev/null
     if is_mute ; then
       icon_name="$DIR/icons/volume-muted.svg"
       dunstify "Mute" -i $icon_name -r 5555 -u normal -h int:value:0
