@@ -89,7 +89,7 @@
 			  :tooltip "Volume: ${current-volume}%" 
 			  :max 101 
 			  :min 0 
-			  :onchange "pamixer --set-volume {}%" ))
+			  :onchange "pamixer --set-volume {}" ))
 	(button   :onclick "scripts/popup audio"   :class "volume-icon" ""))))
 (defpoll current-volume :interval "1s" "pamixer --get-volume")
 (defvar volum false)

@@ -91,26 +91,26 @@ cd dotfiles-bspwm/
 Una vez tengamos el repositorio de manera local, lo que tenemos que hacer es copear las carpetas del directorio **`config/`**, los comandos son lo siguientes:
 
 ```bash
-cp -r config/* ~/.config
+cp -rv config/* ~/.config
 ```
 
 Ahora haremos lo mismo con el direcorio **`fonts/`**:
 
 ```bash
 mkdir -p ~/.fonts
-cp -r fonts/* ~/.fonts
+cp -rv fonts/* /usr/share/fonts/*
 ```
 
 Copiamos el directorio **`bin/`** en **`$HOME/.local/bin`**:
 
 ```bash
-cp -r bin/* ~/.local/bin
+cp -rv bin/* ~/.local/bin
 ```
 
 Copiamos los archivos de configuracion que esta en **`home/`** 
 
 ```bash
-cp -r home/* $HOME
+cp -rv .p10k .zshrc bg.png $HOME/
 ```
 
 ---
