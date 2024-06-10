@@ -111,6 +111,7 @@ Copiamos los archivos de configuracion que esta en **`home/`**
 
 ```bash
 cp -rv .p10k .zshrc bg.png $HOME/
+sudo cp -rv .p10k .zshrc /root/ 
 ```
 
 ---
